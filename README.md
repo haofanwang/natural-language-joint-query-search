@@ -1,5 +1,5 @@
 # natural-language-joint-query-search
-Search photos on Unsplash, including text-to-image search, image-to-image search, text+text-to-image search and search with joint image+text queries.
+Search photos on Unsplash, including text-to-image, image-to-image, texts-to-image, and joint image+text queries search.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/haofanwang/natural-language-joint-query-search/blob/main/colab/unsplash_image_search.ipynb)
 
@@ -25,7 +25,7 @@ Search photos on Unsplash using natural language descriptions. The search is pow
 
 ### Image+Text-to-Image
 
-![Search results for an empty street](images/example-image+text-image-1.png)
+![Search results for an empty street with query "cars"](images/example-image+text-image-1.png)
 
 
 ## Acknowledgements
