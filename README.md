@@ -15,7 +15,7 @@ Search photos on Unsplash using natural language descriptions. The search is pow
 
 ### Image-to-Image
 
-##### A normal street view.
+##### A normal street view. (The left side is the source image)
 ![Search results for a street view image](images/example-image-image-1.png)
 
 
