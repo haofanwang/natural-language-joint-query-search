@@ -7,24 +7,30 @@ Search photos on Unsplash using natural language descriptions. The search is pow
 
 ### Text-to-Image
 
+##### "Tokyo tower at night."
 ![Search results for "Tokyo tower at night."](images/example-text-image-1.png)
 
+##### "People come and go on the street."
 ![Search results for "People come and go on the street."](images/example-text-image-2.png)
 
 ### Image-to-Image
 
+##### A normal street view.
 ![Search results for a street view image](images/example-image-image-1.png)
 
 
 ### Text+Text-to-Image
 
+##### "Flower" + "Blue sky"
 ![Search results for "flower" and "blue sky"](images/example-text2-image-1.png)
 
+##### "Flower" + "Bee"
 ![Search results for "flower" and "bee"](images/example-text2-image-2.png)
 
 
 ### Image+Text-to-Image
 
+##### A normal street view + "cars"
 ![Search results for an empty street with query "cars"](images/example-image+text-image-1.png)
 
 
