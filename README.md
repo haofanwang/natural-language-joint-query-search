@@ -42,6 +42,19 @@ Attention visualization of CLIP.
 ##### A normal street view + "cars"
 ![Search results for an empty street with query "cars"](images/example-image+text-image-1.png)
 
+## Visualization
+
+##### "A woman holding an umbrella standing next to a man in a rainy day"
+
+![Search results for "A woman holding an umbrella standing next to a man in a rainy day"](images/attention-2.png)
+
+"umbrella", "standing" and "rainy" receive the most of attention.
+
+##### "A red flower is under the blue sky and there is a bee on the flower"
+
+![Search results for "A red flower is under the blue sky and there is a bee on the flower"](images/attention-1.png)
+
+"flower", "sky" and "bee" receive the most of attention.
 
 ## Acknowledgements
 
