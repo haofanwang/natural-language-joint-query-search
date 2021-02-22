@@ -47,7 +47,12 @@ import pandas as pd
 from PIL import Image
 
 from CLIP.clip import clip
-from CLIP.clip import model
+
+def encode_search_query(search_query):
+    with torch.no_grad():
+        text_encoded, weight = model.encode_text(clip.tokenize(search_query).to(device))
+        text_encoded /= text_encoded.norm(dim=-1, keepdim=True)
+        return text_encoded.cpu().numpy()
 
 def find_best_matches(text_features, photo_features, photo_ids, results_count):
   similarities = (photo_features @ text_features.T).squeeze(1)
@@ -63,7 +68,7 @@ photo_features = np.load("unsplash-dataset/features.npy")
 
 # text to image
 search_query = "Tokyo Tower at night."
-text_features = encode_search_query(search_query)
+text_features = model.encode_search_query(search_query)
 best_photo_ids = find_best_matches(text_features, photo_features, photo_ids, 5)
 for photo_id in best_photo_ids:
   print("https://unsplash.com/photos/{}/download".format(photo_id))
