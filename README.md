@@ -75,7 +75,9 @@ for photo_id in best_photo_ids:
 
 # image to image
 source_image = "images/borna-hrzina-8IPrifbjo-0-unsplash.jpg"
-image_feature = preprocess(Image.open(search_image)).unsqueeze(0).to(device)
+with torch.no_grad():
+  image_feature = model.encode_image(preprocess(Image.open(source_image)).unsqueeze(0).to(device))
+  image_feature = (image_feature / image_feature.norm(dim=-1, keepdim=True)).cpu().numpy()
 best_photo_ids = find_best_matches(image_feature, photo_features, photo_ids, 5)
 for photo_id in best_photo_ids:
   print("https://unsplash.com/photos/{}/download".format(photo_id))
@@ -93,7 +95,9 @@ for photo_id in best_photo_ids:
 # image+text to image
 search_image = "images/borna-hrzina-8IPrifbjo-0-unsplash.jpg"
 search_text = "cars"
-image_feature = preprocess(Image.open(search_image)).unsqueeze(0).to(device)
+with torch.no_grad():
+  image_feature = model.encode_image(preprocess(Image.open(search_image)).unsqueeze(0).to(device))
+  image_feature = (image_feature / image_feature.norm(dim=-1, keepdim=True)).cpu().numpy()
 text_feature = encode_search_query(search_text)
 modified_feature = image_feature + text_feature
 best_photo_ids = find_best_matches(modified_feature, photo_features, photo_ids, 5)
