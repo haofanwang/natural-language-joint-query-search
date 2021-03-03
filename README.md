@@ -1,6 +1,6 @@
 # natural-language-joint-query-search
 
-In the project, we support multiple types query search including text-image, image-image, text2-image and text+image-image. In order to analyse the result of retrieved images, we also support visualization of CLIP attention.
+In the project, we support multiple types of query search including text-image, image-image, text2-image, and text+image-image. In order to analyze the result of retrieved images, we also support visualization of CLIP attention.
 
 ## Colab Demo
 
@@ -21,7 +21,7 @@ $ conda install --yes -c pytorch pytorch=1.7.1 torchvision cudatoolkit=11.0
 $ pip install ftfy regex tqdm
 ```
 
-To visualize the attention of CLIP, we slightly modify the code of CLIP as mention [here](https://github.com/openai/CLIP/issues/18), so you don't have to install CLIP via official command. A open-sourced visualization tool is used in our project, you need to clone it into this repo.
+To visualize the attention of CLIP, we slightly modify the code of CLIP as mention [here](https://github.com/openai/CLIP/issues/18), so you don't have to install CLIP via official command. An open-sourced visualization tool is used in our project, you need to clone it into this repo.
 
 ```bash
 $ git clone https://github.com/shashwattrivedi/Attention_visualizer.git
@@ -105,7 +105,7 @@ for photo_id in best_photo_ids:
   print("https://unsplash.com/photos/{}/download".format(photo_id))
 ```
 
-Example of CLIP attention visualization. You can know which keywords does CLIP use to retrieve the results. To be convinent, all punctuations are removed in search query for visualization.
+Example of CLIP attention visualization. You can know which keywords does CLIP use to retrieve the results. To be convenient, all punctuations are removed.
 
 ```python
 import torch
