@@ -1,6 +1,6 @@
 # natural-language-joint-query-search
 
-In the project, we support multiple types of query search including text-image, image-image, text2-image, and text+image-image. In order to analyze the result of retrieved images, we also support visualization of CLIP attention.
+In the project, we support multiple types of query search including text-image, image-image, text2-image, and text+image-image. In order to analyze the result of retrieved images, we also support visualization of text attention. The attention of image will be supported soon!
 
 ## Colab Demo
 
