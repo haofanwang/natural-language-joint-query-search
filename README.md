@@ -27,14 +27,20 @@ To visualize the attention of CLIP, we slightly modify the code of CLIP as menti
 $ git clone https://github.com/shashwattrivedi/Attention_visualizer.git
 ```
 
-Download the pre-extracted image [id](https://drive.google.com/uc?id=1FdmDEzBQCf3OxqY9SbU-jLfH_yZ6UPSj) and [features](https://drive.google.com/uc?id=1L7ulhn4VeN-2aOM-fYmljza_TQok-j9F) of Unsplash dataset, and put them under unsplash-dataset dir, details can be found in [natural-language-image-search](https://github.com/haltakov/natural-language-image-search) project.
+Download the pre-extracted image id and features of Unsplash dataset from [Google Drive](https://drive.google.com/drive/folders/1WQmedVCDIQKA2R33dkS1f980YsJXRZ-q) or just run the following commands, and put them under unsplash-dataset dir, details can be found in [natural-language-image-search](https://github.com/haltakov/natural-language-image-search) project.
 
 ```bash
-$ mkdir unsplash-dataset
+from pathlib import Path
 
-$ wget https://transfer.army/api/download/TuWWFTe2spg/EDm6KBjc -O unsplash-dataset/photo_ids.csv
+# Create a folder for the precomputed features
+!mkdir unsplash-dataset
 
-$ wget https://transfer.army/api/download/LGXAaiNnMLA/AamL9PpU -O unsplash-dataset/features.npy
+# Download from Github Releases
+if not Path('unsplash-dataset/photo_ids.csv').exists():
+  !wget https://github.com/haltakov/natural-language-image-search/releases/download/1.0.0/photo_ids.csv -O unsplash-dataset/photo_ids.csv
+
+if not Path('unsplash-dataset/features.npy').exists():
+  !wget https://github.com/haltakov/natural-language-image-search/releases/download/1.0.0/features.npy -O unsplash-dataset/features.npy
 ```
 
 Example of joint query search.
